@@ -20,8 +20,7 @@
     <script type='text/javascript' src='tableExport.js'></script>
      <script type='text/javascript' src='jspdf.min.js'></script>
      <script type='text/javascript' src='html2canvas.js'></script>
-     <script src="https://cdnjs.cloudflare.com/ajax/libs/html2canvas/0.4.1/html2canvas.js"></script>
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf/1.0.272/jspdf.debug.js"></script>
+     
  
   <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css"
     integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
@@ -71,7 +70,7 @@
   </a>
 
   <ul class="dropdown-menu" aria-labelledby="dropdownMenuLink">
-    <li><a id="pdfs" href="#" >pdf</a></li>
+   
 
    
     <li><a onclick="$('#list').tableExport({type:'excel' ,escape:'false'});"href="#" >EXCEL</a></li>
@@ -143,18 +142,7 @@
   </tbody>
 </table>
 </div>
-<script>
-  $(document).on('click','#pdfs',function(){
-let pdf = new jsPDF();
-let section=$('body');
-let page= function() {
-    pdf.save('pagename.pdf');
-   
-};
-pdf.addHTML(section,page);
-})
 
-</script>
 
 
 </body>
